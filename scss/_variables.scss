@@ -1,0 +1,10 @@
+// override BS4 variables and custom variables mixins
+@use "sass:color";
+$theme-colors: (
+  'primary': #009cab,
+  'danger': #f04c25,
+);
+
+// color all pages
+$logo-color: color.adjust(orange, $lightness: 20%);
+$quote-color: color.adjust($logo-color, $lightness: 30%);

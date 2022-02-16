@@ -1,0 +1,38 @@
+@use "sass:color";
+// All pages
+@mixin layout_spacing($size: 14px) {
+  font-size: $size;
+  margin: $size;
+  padding: $size;
+  line-height: 1.5;
+}
+@mixin headerpic($url, $height: 650px, $position: bottom) {
+  background-image: url($url);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center $position;
+  height: $height;
+}
+@mixin quotepic($url, $position: top) {
+  filter: grayscale(100%);
+  background-image: url($url);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center $position;
+  height: 650px;
+}
+
+// Pagina 2 Matthias Mentale ondersteuning
+@mixin statsBar($width) {
+  width: $width;
+  background-color: orange;
+  height: 15px;
+}
+
+// Pagina 1 Zico blessures
+@mixin blessurepic($url, $position: center) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center $position;
+  height: 450px;
+}

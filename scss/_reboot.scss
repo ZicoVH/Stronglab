@@ -1,0 +1,123 @@
+// basic layout of all pages
+
+//Imports
+@import 'variables';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+// defealt Fysieke ondersteuning & Mentale ondersteuning
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Index page
+body {
+  font-family: 'Raleway', sans-serif;
+}
+section {
+  @include layout_spacing(18px);
+}
+.headerindex {
+  @include headerpic('../assets/images/headerIndex.jpg');
+}
+.quoteindex {
+  @include quotepic('../assets/images/quoteIndex.jpg');
+}
+.borderbottom {
+  border-bottom: 1px solid lightgrey;
+}
+.cardmaxwidth {
+  max-width: 540px;
+}
+.inversion {
+  filter: invert(100%);
+}
+.copyrightbg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.infobord {
+  border-radius: 15px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  h2 {
+    border-bottom: 1px solid $logo-color;
+    padding-bottom: 2px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  ul {
+    margin-left: 1.3rem;
+  }
+}
+.gediplomeerd {
+  h2 {
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h4 {
+    font-family: 'Kiwi Maru', serif;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 65%;
+  }
+}
+blockquote {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  @media screen and (min-width: 768px) {
+    margin: auto;
+    padding-top: 10%;
+    max-width: 65%;
+  }
+}
+footer {
+  h5 {
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+}
+
+//DARK THEME all pages
+body.dark {
+  background-color: #292c35;
+  color: white;
+  .card {
+    background-color: #292c35;
+  }
+}
+.label {
+  background-color: slategrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 50%;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  transform: scale(1);
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox:checked + .label .ball {
+  transform: translate(24px);
+}
+.ball {
+  background-color: slategrey;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 20px;
+  width: 20px;
+  transition: transform 0.2s linear;
+}

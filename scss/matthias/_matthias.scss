@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} // defealt Fysieke ondersteuning & Mentale ondersteuning
+
+//pagina 1 Fysieke ondersteuning
+.personalHeader {
+  @include headerpic('../assets/images/headerPersonal.jpg', $position: top);
+}
+.personalQuote {
+  @include quotepic('../assets/images/quotePersonal.jpg', $position: top);
+}
+.personal {
+  h2 {
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  ul {
+    padding-left: 5%;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  max-width: 100%;
+}
+.duo {
+  h2 {
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  ul {
+    padding-left: 5%;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  max-width: 100%;
+}
+.healt {
+  h2 {
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  max-width: 100%;
+}
+.vitaliteit {
+  h2 {
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  .inleiding {
+    font-weight: bold;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  max-width: 100%;
+}
+
+// Openingsoon Fysieke ondersteuning & Mentale ondersteuning
+.coming-soon {
+  h2 {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  min-height: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.day,
+.hour,
+.minute,
+.second {
+  font-size: 3rem;
+}
+.waiting {
+  max-width: 60%;
+  border: 1px solid orange;
+  border-radius: 50%;
+}
+
+//pagina 2 Mentale ondersteuning
+.mentalHeader {
+  @include headerpic('../assets/images/headerMental.jpg', $position: top);
+}
+.mentalBetween {
+  @include headerpic('../assets/images/headerMental.jpg', $height: 400px, $position: top);
+}
+.mentalQuote {
+  @include headerpic('../assets/images/quoteMental.jpg');
+}
+.jumbotron-fluid {
+  position: relative;
+}
+.mentalTittle {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  color: $logo-color;
+}
+.mental {
+  text-align: left;
+  h2 {
+    text-align: center;
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+}
+.meditatie {
+  text-align: left;
+  h2 {
+    text-align: center;
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+//statsbars Mentale ondersteuning
+.statsbar_100 {
+  @include statsBar(95%);
+}
+.statsbar_95 {
+  @include statsBar(90%);
+}
+.statsbar_90 {
+  @include statsBar(85%);
+}
+.statsbar_75 {
+  @include statsBar(70%);
+}
+.statsbar_70 {
+  @include statsBar(65%);
+}
+.statsbar_55 {
+  @include statsBar(50%);
+}
+.statsbar_35 {
+  @include statsBar(30%);
+}
+.statsbar_30 {
+  @include statsBar(25%);
+}
+.statsbar_20 {
+  @include statsBar(15%);
+}

@@ -1,0 +1,169 @@
+.student2 {
+  // unique code for student 2
+}
+
+.blessurealgemeen {
+  text-align: left;
+  h2 {
+    border-bottom: 2px solid $logo-color;
+    padding-bottom: 5px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  img {
+    border-radius: 20px;
+    align-items: end;
+    display: flex;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+    img {
+      width: 250px;
+      height: 190px;
+      border-radius: 40px;
+    }
+  }
+}
+.jumbotron {
+  position: relative;
+}
+.titel {
+  position: absolute;
+  top: 80%;
+  padding-left: 10px;
+}
+.titelbg {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  border-radius: 15px;
+}
+section {
+  ul {
+    margin-left: 1.3rem;
+  }
+}
+.checked {
+  color: $logo-color;
+}
+
+.review {
+  padding-left: 2rem;
+}
+
+.card {
+  border-color: $logo-color;
+}
+
+.twitterfeed {
+  padding-right: 4rem;
+}
+
+.blessureheader {
+  @include headerpic('../assets/images/hoofdblessure.jpg');
+}
+
+#schouder {
+  @include blessurepic('../assets/images/schouder.jpg');
+}
+
+#pols {
+  @include blessurepic('../assets/images/pols.jpg');
+}
+
+#rug {
+  @include blessurepic('../assets/images/rug2.jpg');
+}
+
+#knie {
+  @include blessurepic('../assets/images/knie.jpg', bottom);
+}
+
+#faq {
+  @include blessurepic('../assets/images/faq.jpg');
+}
+.section-center {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.questions {
+  margin-left: auto;
+  margin-right: auto;
+}
+.question {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+}
+.question-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question-title p {
+  margin-bottom: 0;
+  padding-right: 1rem;
+}
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.question-text p {
+  margin-bottom: 0;
+}
+
+.question-text {
+  display: none;
+}
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
+}
+
+.blessurequote {
+  @include quotepic('../assets/images/prevention.jpg');
+}
+
+.reviewheader {
+  @include headerpic('../assets/images/reviewheader.jpg', $position: top);
+}
+
+.reviewcard {
+  max-width: 70%;
+}
+
+.reviewquote {
+  @include quotepic('../assets/images/reviewbottom.jpg', $position: center);
+}
+@media screen and (min-width: 760px) {
+  .reviewpadding {
+    padding-left: 5.5rem;
+  }
+  .checks {
+    offset: -20rem;
+  }
+}
+
+.clock {
+  font-family: 'Kiwi Maru', serif;
+  color: $logo-color;
+}
